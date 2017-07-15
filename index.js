@@ -1,11 +1,11 @@
-const accordion = document.querySelector('.accordion');
-const items 	= accordion.querySelectorAll('li');
-const questions = accordion.querySelectorAll('.question');
+const ACCORDION = document.querySelector('.accordion');
+const ITEMS 	= ACCORDION.querySelectorAll('li');
+const QUESTIONS = ACCORDION.querySelectorAll('.question');
 
 function toggleAccordion() {
 	const thisItem = this.parentNode;
 
-	items.forEach(item => {
+	ITEMS.forEach(item => {
 		if(thisItem == item){
 			thisItem.classList.toggle('open');			
 			return;
@@ -15,5 +15,5 @@ function toggleAccordion() {
 	});
 }
 
-questions.forEach(question => question.addEventListener('click', toggleAccordion));
+QUESTIONS.forEach(question => question.addEventListener('click', toggleAccordion));
 
